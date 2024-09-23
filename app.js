@@ -1,9 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(cors());
 
 //Conectar ao banco de dados
 const db = new sqlite3.Database('./capivaras.db', (err) => {
