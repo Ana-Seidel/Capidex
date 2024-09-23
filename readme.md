@@ -21,17 +21,17 @@ Antes de rodar o projeto, certifique-se de ter o seguinte instalado:
 
 Siga os passos abaixo para rodar o projeto localmente:
 
-1. Instale o SQLite3:
-    ```bash
-    npm install sqlite3
-    ```
-
-2. Clone este repositório:
+1. Clone este repositório:
     ```bash
     git clone https://github.com/Ana-Seidel/Capidex.git
     ```
 
-3. Execute esse comando para funcionar o banco de dados:
+2. Instale o SQLite3:
+    ```bash
+    npm install sqlite3
+    ```
+
+3. Execute o seguinte comando para iniciar o projeto:
     ```bash
     node app.js
     ```
