@@ -21,7 +21,21 @@ app.get('/capivaras', (req, res) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
-        res.json(rows);
+
+        // Mapear os dados para substituir valores nulos por texto padrão
+        const modifiedRows = rows.map(row => ({
+            nome: row.nome || 'Sem registo',
+            idade: row.idade !== null ? row.idade : 'Sem registo',
+            peso: row.peso !== null ? row.peso : 'Sem registo',
+            status_saude: row.status_saude || 'Sem registo',
+            habitat: row.habitat || 'Sem registo',
+            comportamento: row.comportamento || 'Sem registo',
+            dieta: row.dieta || 'Sem registo',
+            data_registro: row.data_registro || 'Sem registo',
+            observacoes: row.observacoes || 'Sem registo'
+        }));
+
+        res.json(modifiedRows);
     });
 });
 
