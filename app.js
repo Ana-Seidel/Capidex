@@ -42,5 +42,5 @@ app.post('/capivaras', (req, res) => {
 
 //Para iniciar
 app.listen(PORT, () => {
-    console.log(`O servidor funcionando na porta ${PORT}`);
+    console.log(`O servidor está funcionando na porta ${PORT}`);
 });
