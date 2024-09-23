@@ -38,4 +38,9 @@ app.post('/capivaras', (req, res) => {
         }
         res.status(201).json({ id: this.lastID });
     });
-}); 
+});
+
+//Para iniciar
+app.listen(PORT, () => {
+    console.log(`O servidor funcionando na porta ${PORT}`);
+});
